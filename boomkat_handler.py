@@ -10,7 +10,7 @@ class BoomkatHandler:
         self.__driver_path = driver_path
         self.__url = url
         try:
-            print(path.isfile(self.__driver_path))
+            path.isfile(self.__driver_path)
         except Exception as e:
             print(f"Driver not in path: {e}")
             raise e
@@ -21,7 +21,7 @@ class BoomkatHandler:
         except Exception as e:
             raise e
         driver.get(self.__url)
-        time.sleep(2)
+        time.sleep(1)
         bestsellers_web_element = driver.find_elements_by_class_name("bestsellers")[
             0
         ].text
