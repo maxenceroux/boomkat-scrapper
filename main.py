@@ -16,6 +16,7 @@ if __name__ == "__main__":
         bestsellers = boomkat.get_bestsellers_list()
     if env == "dev":
         bestsellers = [
+            "Moritz Von Oswald Trio Dissent",
             "Bendik Giske Cracks",
             "Felisha Ledesma Fringe",
             "Dijit Tapes & Krikor Remixes",
@@ -24,6 +25,7 @@ if __name__ == "__main__":
             "LUC FERRARI Labyrinthe de Violence",
         ]
     spotify = SpotifyHandler()
+
     albums = spotify.get_albums_urls(bestsellers)
 
     albums_with_tracks = spotify.get_albums_tracks(albums)
